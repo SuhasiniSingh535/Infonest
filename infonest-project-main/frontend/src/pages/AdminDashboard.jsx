@@ -295,8 +295,10 @@ const AdminDashboard = () => {
     ];
 
     return (
-        <div className="admin-dashboard">
-            <BackButton />
+        <div className="admin-dashboard page-container">
+            <div className="page-back-section">
+                <BackButton />
+            </div>
 
             {/* ── Header ── */}
             <header className="dashboard-header">
@@ -310,6 +312,9 @@ const AdminDashboard = () => {
                     <button className="btn btn-danger" onClick={logout}>Logout</button>
                 </div>
             </header>
+
+            <div style={{ height: '1.5rem' }} />
+
 
             {/* ── Alert ── */}
             {message.text && (

@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { useTheme } from '../context/ThemeContext';
 import './Navbar.css';
 
 const Navbar = () => {
     const { user, logout, isAuthenticated } = useAuth();
-    const { isDark, toggleTheme } = useTheme();
 
     const goToDashboard = () => {
         if (user?.role === 'ADMIN') return '/admin';
@@ -24,10 +22,6 @@ const Navbar = () => {
                     {isAuthenticated && (
                         <span className="user-info">Hi, {user?.firstName || 'User'}!</span>
                     )}
-
-                    <button className="theme-toggle" onClick={toggleTheme} title="Toggle theme">
-                        {isDark ? '☀️' : '🌙'}
-                    </button>
 
                     {isAuthenticated ? (
                         <>

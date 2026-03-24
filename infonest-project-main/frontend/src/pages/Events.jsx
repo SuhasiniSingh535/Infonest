@@ -100,8 +100,10 @@ const Events = () => {
     }
 
     return (
-        <div className="events-page">
-            <BackButton />
+        <div className="events-page page-container">
+            <div className="page-back-section">
+                <BackButton />
+            </div>
             {/* Header */}
             <header className="page-header card">
                 <h1>Events</h1>
@@ -114,6 +116,9 @@ const Events = () => {
                     )}
                 </div>
             </header>
+
+            <div style={{ height: '1.5rem' }} />
+
 
             {message.text && (
                 <div className={`alert alert-${message.type}`}>

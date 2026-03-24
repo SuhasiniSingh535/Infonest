@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+.bk-page.page-container {
+    padding-top: 4rem;
+}
+
+
 .bk-container {
     max-width: 780px;
     margin: 0 auto;

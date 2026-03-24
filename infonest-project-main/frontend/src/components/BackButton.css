@@ -1,14 +1,12 @@
 @import url('../GlobalTheme.css');
 
 .back-btn {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 100;
-    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
     align-items: center;
     gap: 0.375rem;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     background: var(--surface);
     border: 1px solid var(--border-light);
     border-radius: var(--radius);
@@ -17,7 +15,20 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+}
+
+.page-back-section {
+    margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+    transform: translateX(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .back-btn:hover {

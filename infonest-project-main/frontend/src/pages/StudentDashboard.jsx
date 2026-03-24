@@ -63,8 +63,10 @@ const StudentDashboard = () => {
     }
 
     return (
-        <div className="student-dashboard">
-            <BackButton />
+        <div className="student-dashboard page-container">
+            <div className="page-back-section">
+                <BackButton />
+            </div>
             <header className="dashboard-header card">
                 <h1>🎓 Welcome, <span>{user?.firstName || 'Student'}</span>!</h1>
                 <div className="header-actions">
@@ -72,9 +74,13 @@ const StudentDashboard = () => {
                     <button className="btn btn-danger" onClick={logout}>Logout</button>
                 </div>
             </header>
+
+            <div style={{ height: '1.5rem' }} />
+
             <div className="card">
                 <h2>📋 My Event Registrations</h2>
                 <table>
+
                     <thead>
                         <tr>
                             <th>Event</th>

@@ -209,8 +209,10 @@ const FacultyDashboard = () => {
     }
 
     return (
-        <div className="faculty-dashboard">
-            <BackButton />
+        <div className="faculty-dashboard page-container">
+            <div className="page-back-section">
+                <BackButton />
+            </div>
             <header className="dashboard-header card">
                 <div className="header-info">
                     <h1>👨‍🏫 Club Official Dashboard</h1>
@@ -221,6 +223,9 @@ const FacultyDashboard = () => {
                     <button className="btn btn-danger" onClick={logout}>Logout</button>
                 </div>
             </header>
+
+            <div style={{ height: '1.5rem' }} />
+
 
             {message.text && (
                 <div className={`alert alert-${message.type}`}>
