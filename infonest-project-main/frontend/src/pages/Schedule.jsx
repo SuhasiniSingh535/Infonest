@@ -214,8 +214,14 @@ const Schedule = () => {
 
                 {/* Advanced Search Modal Pop-up */}
                 {showAdvanced && (
-                    <div className="modal-overlay">
-                        <div className="modal card">
+                    <div 
+                        className="modal-overlay" 
+                        onClick={() => setShowAdvanced(false)} // 👈 YEH ADD KIYA: Bahar click par band
+                    >
+                        <div 
+                            className="modal card" 
+                            onClick={(e) => e.stopPropagation()} // 👈 YEH ADD KIYA: Andar click par band nahi hoga
+                        >
                             <h3>📅 Custom Schedule Search</h3>
                             <div className="form-group">
                                 <label>Select Day</label>
@@ -223,11 +229,13 @@ const Schedule = () => {
                                     className="modal-input"
                                     onChange={(e) => setAdvancedData({...advancedData, day: e.target.value})}
                                 >
+                                    {/* 👈 Tuesday hata diya, Saturday & Sunday add kar diye */}
                                     <option value="Monday">Monday</option>
-                                    <option value="Tuesday">Tuesday</option>
                                     <option value="Wednesday">Wednesday</option>
                                     <option value="Thursday">Thursday</option>
                                     <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
                                 </select>
                             </div>
                             <div className="form-group">
@@ -241,36 +249,13 @@ const Schedule = () => {
 
                             <button
                                 className="btn btn-primary btn-full"
-                                onClick={handleSearch}
+                                onClick={handleAdvancedSearch} // 👈 MAIN FIX: Yahan 'handleSearch' ki jagah 'handleAdvancedSearch' aayega
                                 disabled={loading}
                             >
                                 {loading ? 'Searching...' : 'Search Schedule'}
                             </button>
 
-                            {showSchedule && scheduleData && (
-                                <div className="schedule-result">
-                                    <div className="schedule-pdf">
-                                        <h4>Classroom Schedule</h4>
-                                        <div className="pdf-preview">
-                                            <div className="pdf-icon">📄</div>
-                                            <p>Weekly Schedule - {scheduleData.id}</p>
-                                            <button className="btn btn-secondary">View Full Schedule</button>
-                                        </div>
-                                    </div>
-
-                                    <div className="location-card classroom-location">
-                                        <div className="location-icon">📍</div>
-                                        <div className="location-info">
-                                            <h4>Current Class</h4>
-                                            <p className="class-details">{scheduleData.details}</p>
-                                            <div className="location-badges">
-                                                <span className="label">Location:</span>
-                                                <span className="badge badge-secondary">{scheduleData.currentLocation}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
+                            {/* Modal ke andar Schedule Result dikhane ki zaroorat nahi hai, wo bahar dikhega */}
                         </div>
                     </div>
                 )}
