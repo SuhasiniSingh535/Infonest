@@ -238,8 +238,10 @@ const downloadTemplate = () => {
     a.click();
 };
     return (
-        <div className="office-dashboard">
-            <BackButton />
+        <div className="office-dashboard page-container">
+            <div className="page-back-section">
+                <BackButton />
+            </div>
             <header className="dashboard-header card">
                 <div className="header-info">
                     <h1>🏢 Office Dashboard</h1>
@@ -252,13 +254,15 @@ const downloadTemplate = () => {
                 </div>
             </header>
 
-            
+            <div style={{ height: '1.5rem' }} /> {/* Vertical spacing */}
 
             {/* Stats */}
             <div className="stats-row">
                 <div className="stat-card"><span className="stat-num">{myBookings.length}</span><span className="stat-label">My Bookings</span></div>
                 <div className="stat-card"><span className="stat-num">{venues.length}</span><span className="stat-label">Active Venues</span></div>
             </div>
+
+            <div style={{ height: '1.5rem' }} /> {/* Spacing between sections */}
 
             {/* Tabs */}
             <div className="tabs">
@@ -272,6 +276,7 @@ const downloadTemplate = () => {
                     📅 Teacher Schedules
                 </button>
             </div>
+
 
             {/* My Bookings Tab */}
             {activeTab === 'bookings' && (

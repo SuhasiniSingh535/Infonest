@@ -26,26 +26,7 @@
   --accent-foreground: #ffffff;
 }
 
-body.dark {
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --primary: #3b82f6;
-  --primary-foreground: #0f172a;
-  --secondary: #06b6d4;
-  --secondary-foreground: #f8fafc;
-  --muted: #64748b;
-  --muted-foreground: #f8fafc;
-  --border: rgba(59, 130, 246, 0.2);
-  --input: #1e293b;
-  --ring: #3b82f6;
-  --destructive: #f87171;
-  --success: #4ade80;
-  --warning: #fbbf24;
-  --accent: #3b82f6;
-  --accent-foreground: #0f172a;
-}
+
 
 * {
   margin: 0;

@@ -7,6 +7,11 @@
     animation: slideUp 0.5s ease;
 }
 
+.student-dashboard.page-container {
+    padding-top: 4rem;
+}
+
+
 .dashboard-header {
     display: flex;
     justify-content: space-between;

@@ -1,11 +1,21 @@
 @import url('../GlobalTheme.css');
 
+
 .office-dashboard {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
     animation: slideUp 0.5s ease;
 }
+
+.office-dashboard.page-container {
+    padding-top: 4rem;
+}
+
+.page-back-section {
+    margin-bottom: 2rem;
+}
+
 
 .office-dashboard .dashboard-header {
     display: flex;

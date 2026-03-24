@@ -7,6 +7,11 @@
     animation: slideUp 0.5s ease;
 }
 
+.events-page.page-container {
+    padding-top: 4rem;
+}
+
+
 .page-header {
     display: flex;
     justify-content: space-between;
